@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset ="UTF-8">
+	<title></title>
+</head>
+<style>
+	.tree{
+  display:block;
+  position:absolute;
+  width:50px;
+  height:250px;
+  bottom:100px;
+  left:210px;
+  background:#6D4C41;
+}
+.dn{
+  position: absolute;
+  left:-200px;
+  top:-300px;
+}
+
+
+.floor{
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100px;
+  bottom:0px;
+  left:0px;
+  background:#AED581;
+}
+
+.top{
+  display:block;
+  position:absolute;
+  width:150px;
+  height:100px;
+  bottom:50px;
+  left:0px;
+}
+
+.top{
+  display:block;
+  position:absolute;
+  width:100px;
+  height:50px;
+  border-radius:50%;
+  -webkit-animation: t 5s linear infinite;
+  -moz-animation: t 5s linear infinite;
+  animation: t 5s linear infinite;
+}
+.top.lv1{
+  background:#DCE775;
+}
+.top.lv2{
+  background:#C0CA33;
+}
+.top.lv3{
+  background:#9E9D24;
+}
+
+.sheet{
+  display:block;
+  position:absolute;
+  top:180px;
+  border-radius: 0 100% 100% 100%;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+  background:#FFB74D;
+}
+
+.wind{
+  display:block;
+  width:300px;
+  height:2px;
+  position:absolute;
+  background:#fff;
+
+  top:150px;
+  -webkit-animation: w 10s linear infinite;
+  -moz-animation: w 10s linear infinite;
+  animation: w 10s linear infinite;
+}
+.wind:after,.wind:before{
+  content:"";
+  display:block;
+  width:350px;
+  height:2px;
+  position:absolute;
+  bottom:10px;
+  background:#fff;
+
+}
+.wind:before{
+  bottom:50px;
+  left:50px;
+}
+.wind:after{
+  top:50px;
+  right:50px;
+}
+
+@-webkit-keyframes w {
+  0% {left:-400px;}
+  70%{left:300px;opacity:2;}
+  100% {left:600px;opacity:0;}
+}
+@-webkit-keyframes t {
+  0% {
+    -webkit-transform: translateX(0px) ;transform:translateX(0px) ;
+  }
+  20% {
+    -webkit-transform: translateX(10px) ;transform:translateX(10px) ;
+  }
+  50% {
+    -webkit-transform:translateX(-10px) ;transform: translateX(-10px) ;
+  }
+  80% {
+    -webkit-transform:translateX(10px) ;transform: translateX(10px) ;
+  }
+  100% {
+    -webkit-transform: translateX(0px) ;transform:translateX(0px) ;
+  }
+}
+@-webkit-keyframes s {
+  0% {
+    top:180px;
+  }
+  20% {
+    -webkit-transform:rotateZ(80deg) translateX(20px) ;transform:rotateZ(80deg) translateX(20px);
+  }
+  40% {
+    -webkit-transform:rotateZ(-20deg) translateX(-20px) ;transform:rotateZ(-20deg) translateX(-20px) ;
+  }
+  60% {
+    -webkit-transform:rotateZ(-100deg) translateX(20px) ; transform:rotateZ(-100deg) translateX(20px) ;
+  }
+  80% {
+    top:400px;
+    -webkit-transform:rotateZ(-10deg) translateX(-20px) ;transform:rotateZ(-10deg)translateX(-20px) ;
+    opacity:1;
+  }
+  100% {
+    top:380px;
+    -webkit-transform:rotateZ(50deg) translateX(100px) ;transform:rotateZ(50deg) translateX(100px) ;
+    opacity:0;
+  }
+}
+
+</style>
+<body>
+<div class="tree">
+      <div class="dn">
+          <div class="top lv3" style="left:50px;top:100px;width: 200px;height:200px;"></div>
+          <div class="top lv3" style="left:150px;top:150px;width:200px;height:200px;"></div>
+          <div class="top lv3" style="left:200px;top:190px;width:200px;height:200px;"></div>
+          <div class="top lv3" style="left:60px;top:210px;width:200px;height:200px;"></div>
+
+          <div class="top lv2" style="left:200px;top:150px;width:150px;height:150px;"></div>
+          <div class="top lv2" style="left:150px;top:190px;width:150px;height:150px;"></div>
+          <div class="top lv2" style="left:60px;top:210px;width:150px;height:150px;"></div>
+
+          <div class="sheet" style="left:110px;width:30px;height:30px;-webkit-animation: s 10s linear infinite;-moz-animation: s 10s linear infinite;animation: s 10s linear infinite;-webkit-animation-delay: 1s;-moz-animation-delay: 1s;-o-animation-delay: 1s;animation-delay: 1s;"></div>
+          <div class="sheet" style="left:160px;width:30px;height:30px;-webkit-animation: s 12s linear infinite;-moz-animation: s 12s linear infinite;animation: s 12s linear infinite;-webkit-animation-delay: 3s;-moz-animation-delay: 3s;-o-animation-delay: 3s;animation-delay: 3s;"></div>
+          <div class="sheet" style="left:220px;width:30px;height:30px;-webkit-animation: s 15s linear infinite;-moz-animation: s 15s linear infinite;animation: s 15s linear infinite;-webkit-animation-delay: 4s;-moz-animation-delay: 4s;-o-animation-delay: 4s;animation-delay: 4s;"></div>
+          <div class="sheet" style="left:260px;width:30px;height:30px;-webkit-animation: s 15s linear infinite;-moz-animation: s 15s linear infinite;animation: s 15s linear infinite;-webkit-animation-delay: 8s;-moz-animation-delay: 8s;-o-animation-delay: 8s;animation-delay: 8s;"></div>
+          <div class="sheet" style="left:220px;width:30px;height:30px;-webkit-animation: s 20s linear infinite;-moz-animation: s 20s linear infinite;animation: s 20s linear infinite;-webkit-animation-delay: 6s;-moz-animation-delay: 6s;-o-animation-delay: 6s;animation-delay: 6s;"></div>
+          <div class="sheet" style="left:320px;width:30px;height:30px;-webkit-animation: s 12s linear infinite;-moz-animation: s 12s linear infinite;animation: s 12s linear infinite;-webkit-animation-delay: 12s;-moz-animation-delay: 12s;-o-animation-delay: 12s;animation-delay: 1s;"></div>
+          <div class="top lv1" style="left:150px;top:50px;width:150px;height:150px;"></div>
+          <div class="top lv1" style="left:230px;top:100px;width:150px;height:150px;"></div>
+          <div class="top lv1" style="left:100px;top:140px;width:150px;height:150px;"></div>
+          </div>
+          </div>
+        <div class="wind" ></div>
+        <div class="wind" style="top:370px;-webkit-animation: w 15s linear infinite;-moz-animation: w 15s linear infinite;animation: w 15s linear infinite;"></div>
+        <div class="floor"></div>
+</body>
+</html>
